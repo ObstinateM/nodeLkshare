@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Grand+Hotel&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}">
+    <link rel="apple-touch-icon" href="{% static 'img/apple-touch-icon.png' %}">
+    <title>lkShare</title>
+    <style>
+    
+    p{
+        position:fixed;
+        color: #fff;
+        font-size: 20px;
+        margin-left: 20px;
+    }
+
+    body{
+        background-color: #2C2A4A;
+        font-family: "Grand Hotel";
+    }
+
+    h2{
+        color: #FFD166;
+        margin-top: 75px;
+        margin-left: 110px;
+        margin-bottom: 0px;
+    }
+
+    .title{
+        text-decoration: none;
+        display: block;
+        text-align: center;
+        margin: 0 auto;
+        margin-top: 75px;
+        color: #FFD166;
+        font-size: 60px;
+    }
+    
+    label{
+        display: none;
+    }
+
+    input:last-child{
+        background-color: #FFD166;
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: 220px;
+        padding: 10px 20px 10px 20px;
+        font-size: 40px;
+        font-family: "Grand Hotel";
+        border-radius: 10px;
+        border-width: 0px;
+    }
+
+    input[type="text" i]{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 275px;
+        height: 12px; 
+        border-width: 0px;
+    }
+
+    .grid{
+        display: grid;
+        place-items: center;
+        height: 95vh;
+    }
+
+    .card{
+        background-color: #BF9ACA;
+        border-radius: 10px;
+        width: 500px;
+        height: 700px;
+    }
+
+    .git{
+        text-decoration: none;
+        color: #fff;
+        border-bottom: 2px solid #fff;
+        padding-bottom: 1px;
+    }
+    </style>
+    <!-- https://coolors.co/ffc6d9-bf9aca-2c2a4a-ffd166-7fdeff -->
+</head>
+<body>
+    <p>Developpé par <a href="http://github.com/ObstinateM" class="git" target="blank">Mathis Beauville</a></p>
+    <div class="grid">
+        <div class="card">
+            <a href="#" class="title">lkShare</a>
+            <h2>Entre un mot-clé :</h2>
+            <form method="POST">
+                <input name="url" type="text" placeholder="Ton mot clé ici"> 
+                <input type="submit" value="GO !">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
