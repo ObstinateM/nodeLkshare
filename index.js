@@ -65,8 +65,7 @@ app.post('/:url', (req, res) => {
   let sql = `SELECT COUNT(url) as total FROM lk WHERE url = '${req.params.url}'`;
   let query = db.query(sql, (err, result) => {
     if(err) throw err;
-    console.log(result[0].total == 0);
-    if(result[0].total == 0){ // LA CONDITION A FIX
+    if(result[0].total === 0){
       let add = {url:req.params.url, content:req.body.content};
       let sql = `INSERT INTO lk SET ?`;
       let query = db.query(sql, add, (err, result) => {
@@ -81,7 +80,6 @@ app.post('/:url', (req, res) => {
       });
     };
   });
-  //${req.body.content}
 });
 
 // Server Start
